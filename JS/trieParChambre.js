@@ -1,7 +1,9 @@
 let trieParChambre = () => {
   let patients = lectureListe();
-  patients.sort((a, b) => {
-    return a.chambre - b.chambre;
-  });
-  return patients;
-}
+  if (patients.length) {
+    patients.sort((a, b) => {
+      return a.chambre - b.chambre;
+    });
+    return patients;
+  }
+};

@@ -1,7 +1,9 @@
 function alarmJoursDePresence() {
   let patients = lectureListe();
+  if (patients.length) {
   let strNowDate = dateDuJour();
   // on selectionne les patients dans pat45[]
+ 
   patients.forEach((elem) => {
     // on calcule les jours de présence
     const days = datediff(parseDate(elem.dateEntre), parseDate(strNowDate));
@@ -13,7 +15,7 @@ function alarmJoursDePresence() {
       fo.appendChild(node);
       node.classList.add("warning");
     }
-  });
+  })};
 }
 
 alarmJoursDePresence();

@@ -5,12 +5,7 @@
  * et renvoi le tableau
  */
 function afficheListe(functrie) {
-  patients = functrie();
-  /**
-   * let mylist = document.querySelector('.lp');
-mylist.insertAdjacentHTML('beforeend', '<li>third</li>');
-   */
-
+  let patients = functrie();
   let tableau = document.querySelector("#tableau");
 
   tableau.classList.add(".tableau");
@@ -36,22 +31,22 @@ mylist.insertAdjacentHTML('beforeend', '<li>third</li>');
   let prenomtab = document.querySelector("#prenomtab");
   let nbjourstab = document.querySelector("#nbjourstab");
   let classe = "";
+  if (patients) {
+    patients.forEach((elem) => {
+      let chambre = elem.chambre;
+      let dateEntree = elem.dateEntre;
+      let strNowDate = dateDuJour();
+      let days = datediff(parseDate(dateEntree), parseDate(strNowDate));
+      elem.jourspresents = days;
 
-  patients.forEach((elem) => {
-    let chambre = elem.chambre;
-    let dateEntree = elem.dateEntre;
-    let strNowDate = dateDuJour();
-    let days = datediff(parseDate(dateEntree), parseDate(strNowDate));
-    elem.jourspresents = days;
+      /**
+       * on affiche la liste dans le tableau 33CC33 CCFF99
+       */
+      classe === "fonce" ? (classe = "claire") : (classe = "fonce");
 
-    /**
-     * on affiche la liste dans le tableau 33CC33 CCFF99
-     */
-    classe === "fonce" ? (classe = "claire") : (classe = "fonce");
-
-    tableau.insertAdjacentHTML(
-      "beforeend",
-      `
+      tableau.insertAdjacentHTML(
+        "beforeend",
+        `
    <tr class=${classe}>
    <td><div align="center"> ${elem.chambre}<div></td>
    <td><div align="center">${elem.name}<div></td>
@@ -63,12 +58,12 @@ mylist.insertAdjacentHTML('beforeend', '<li>third</li>');
    <td class="itemTab"><img src="https://img.icons8.com/windows/32/000000/save.png"/></td>
    </tr>
    `
-   
-    );
-  });
+      );
+    });
+  }
   supression();
   // gere les evenements de suppressions
-  scroll(50,0);
+  scroll(50, 0);
 }
 
 tableau.style.display = "none";
