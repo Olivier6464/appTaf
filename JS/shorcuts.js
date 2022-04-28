@@ -6,6 +6,9 @@ function shorcuts() {
     } else if (e.key.toLowerCase() === "s" && e.ctrlKey) {
       e.preventDefault();
       affichage();
+    } else if (e.key === "F1") {
+      e.preventDefault();
+      toggleModalHelp();
     }
   });
 }

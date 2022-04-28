@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500&display=swap");
+
 * {
   margin: 0;
   padding: 0;
@@ -6,10 +8,9 @@
 }
 
 body {
-  font-family: monospace;
+  font-family: "Roboto Mono", monospace;
   font-weight: 500;
 }
-
 
 hr.stbleu {
   height: 2px;
@@ -21,13 +22,12 @@ hr.stbleu {
   -o-border-radius: 5px;
   border-radius: 5px;
   margin: 0 5%;
-  }
+}
 
 h1 {
   font-size: 1em;
   color: white;
   text-align: center;
-  
 }
 h2 {
   font-size: 1.2em;
@@ -62,28 +62,25 @@ li:hover {
   /* border: 1px solid rgb(207, 95, 30); */
   cursor: pointer;
   background-color: rgb(15, 53, 158);
- 
-
 }
 
 ul {
   margin-bottom: 1em;
 }
 
-
 em {
   color: yellow;
 }
 
 .copied {
-  color:darkorange;
+  color: darkorange;
 }
 
 .member {
   background-color: rgb(68, 67, 5);
-  color:rgb(240, 243, 56)
+  color: rgb(240, 243, 56);
 }
 
-.separate{
+.separate {
   margin-bottom: 10px;
 }

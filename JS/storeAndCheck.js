@@ -30,10 +30,9 @@ function storeAndCheck(chambre, nom, prenom, entree) {
       patients[index].dateEntre = ladateEntre;
     } else {
       patients.push(patient);
-      console.log(patients);
     }
     //on restreint la longueur du tableau
-    while (patients.length > 6) {
+    while (patients.length > 40) {
       patients.splice(0, 1);
     }
     console.log(patients);
