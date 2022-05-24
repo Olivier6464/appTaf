@@ -24,7 +24,7 @@ function afficheListe(functrie) {
         <td onclick="afficheListe(trieParNbJours)" class="itemTab"><div align="center">nbJours</div></td>
         <td onclick="afficheListe(trieParEntree)" class="itemTab"><div align="center">Début</div></td>
         <td class="itemTab"><div align="center">Pid</div></td>
-        <td class="itemTab"><img src="https://img.icons8.com/windows/32/000000/trash.png"/></td>
+        
       </tr>`
   );
   let nomtab = document.querySelector("#nomtab");
@@ -54,8 +54,9 @@ function afficheListe(functrie) {
    <td><div align="center">${days}<div></td>
    <td><div align="center">${elem.dateEntre}<div></td>
    <td><div align="center">${elem.id}<div></td>
-   <td> <div class="supprimer" id=${elem.id} align="center">X</div> </td>
-   <td class="itemTab"><img src="https://img.icons8.com/windows/32/000000/save.png"/></td>
+   <td> <div class="supprimer" id=${elem.id} align="center"><i class="fa fa-trash" aria-hidden="true"></i>
+   </div> </td>
+   <td class="itemTab"><i class="fa fa-save"></i></td>
    </tr>
    `
       );

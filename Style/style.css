@@ -50,7 +50,7 @@ li {
   font-weight: 400;
 }
 
-ul li:hover{
+ul li:hover {
   background-color: #e10c73;
   border-radius: 4px;
   cursor: pointer;
@@ -67,8 +67,7 @@ img {
 }
 
 div.supprimer:hover {
-  color: #fff;
-  background-color: #444;
+  color:#ca2b0f;
   cursor: pointer;
 }
 
@@ -112,8 +111,6 @@ nav a {
   /* color: var(--main-nav-a-color); */
   color: #fdd90e;
 }
-
-
 
 option:nth-child(odd) {
   background-color: #efefef;
@@ -189,56 +186,53 @@ legend {
   font-weight: 800;
 }
 
-
-.modalhelp-container{
+.modalhelp-container {
   visibility: hidden;
-  position:fixed;
-  top:0;
+  position: fixed;
+  top: 0;
   width: 100vw;
   height: 100vh;
   transition: visibility 0.4s;
 }
 
-.modalhelp-container.active{
+.modalhelp-container.active {
   visibility: visible;
   z-index: 3000;
   transition: visibility 0s;
 }
 
-.overlay{
-  position:absolute;
+.overlay {
+  position: absolute;
   width: 100%;
   height: 100%;
   /* background-color: rgba(3, 2, 2, 0.9); */
   background: #333333d3;
   transition: opacity 0.4s 0.2s ease-out;
-  }
+}
 
 .modalhelp-container.active .overlay {
   opacity: 1;
   transition: opacity 0.4s ease-out;
 }
 
-.modalhelp{
+.modalhelp {
   opacity: 0;
   /* max-width: 800px; */
   /* min-width: 300px; */
-  padding: 30px;  
+  padding: 30px;
   background-color: #fff;
   border-radius: 5px;
   position: absolute;
   top: 40%;
   left: 50%;
   transform: translate(-50%, calc(-50% - 40px));
-  transition: opacity 0.4s ease-out,
-  transform 0.4s ease-out;
+  transition: opacity 0.4s ease-out, transform 0.4s ease-out;
 }
 
 .modalhelp-container.active .modalhelp {
   opacity: 1;
   transform: translate(-50%, -50%);
-  transition: opacity 0.4s 0.2s ease-out,
-  transform 0.4s 0.2s ease-out;
+  transition: opacity 0.4s 0.2s ease-out, transform 0.4s 0.2s ease-out;
 }
 
 .close-modalhelp {
@@ -254,7 +248,7 @@ legend {
   color: #fff;
 }
 
-.modalhelp h1{
+.modalhelp h1 {
   margin-bottom: 10px;
   font-family: sans-serif;
   font-weight: 500;
@@ -284,28 +278,32 @@ legend {
   list-style: none;
 }
 
-.menu0{
+.menu0 {
   display: flex;
   flex-direction: row;
   user-select: none;
 }
 
-ul.menu0 li{
+ul.menu0 li {
   list-style: none;
   margin-left: 0.5em;
 }
 
-.menu2{
+.menu2 {
+  background-color: #c50873;
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
   list-style: none;
-  margin-right:0.5em;
-  background-color: #c50873;
+  margin-right: 1em;
 }
 
-.menu2 li:hover span{
-  color:rgba(17, 214, 83, 0.938)
+.menu2 li {
+  margin-left: 0.5em;
+}
+
+.menu2 li i:hover {
+  color: rgba(17, 214, 83, 0.938);
 }
 .container-1 {
   margin-left: 10%;

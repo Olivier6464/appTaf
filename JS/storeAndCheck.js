@@ -1,9 +1,19 @@
-function storeAndCheck(chambre, nom, prenom, entree) {
+/**
+ * storeAndCheck appelé dans affichage rentre le patient lors du bilan
+ * @param {int} chambre
+ * @param {string} nom
+ * @param {string} prenom
+ * @param {string} entree
+ * @param {int} civilite 1 pour H, 0 pour F
+ */
+
+function storeAndCheck(chambre, civilite, nom, prenom, entree) {
   //on recup les donnees du patient
   let lachambre = chambre.value;
   let lenom = majFirst(nom.value);
   let leprenom = majFirst(prenom.value);
   let ladateEntre = entree.value;
+  let gender = civilite === "Madame" ? 0 : 1;
   //on créer l'objet
   const patient = new Object();
 
@@ -12,6 +22,9 @@ function storeAndCheck(chambre, nom, prenom, entree) {
   patient.prenom = leprenom;
   patient.dateEntre = ladateEntre;
   patient.id = uuidv4();
+  patient.gender = gender;
+
+  console.log(patient);
 
   // cas ou rien est en place
   if (localStorage.getItem("liste") == null) {
@@ -39,6 +52,4 @@ function storeAndCheck(chambre, nom, prenom, entree) {
     chPatients = JSON.stringify(patients);
     localStorage.setItem("liste", chPatients);
   }
-
-  // appel storeAndCheck dans affichage
 }

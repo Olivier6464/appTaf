@@ -9,6 +9,10 @@ function shorcuts() {
     } else if (e.key === "F1") {
       e.preventDefault();
       toggleModalHelp();
+    } else if (e.key.toLowerCase() === "p" && e.ctrlKey) {
+      e.preventDefault();
+      window.location.href = "../Suivis/suivis.html";
+      // affichage();
     }
   });
 }

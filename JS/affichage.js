@@ -291,5 +291,5 @@ function affichage() {
     e.stopPropagation();
   });
 
-  storeAndCheck(chambre, nom, prenom, entree);
+  storeAndCheck(chambre, civilite, nom, prenom, entree);
 }
