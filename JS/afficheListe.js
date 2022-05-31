@@ -4,8 +4,10 @@
  * on passe la fonction qui extrait la liste du localstorage
  * et renvoi le tableau
  */
-function afficheListe(functrie) {
-  let patients = functrie();
+function afficheListe() {
+  localStorage.length;
+  let patients = trieParChambre();
+  console.log(patients);
   let tableau = document.querySelector("#tableau");
 
   tableau.classList.add(".tableau");
@@ -27,13 +29,10 @@ function afficheListe(functrie) {
         
       </tr>`
   );
-  let nomtab = document.querySelector("#nomtab");
-  let prenomtab = document.querySelector("#prenomtab");
-  let nbjourstab = document.querySelector("#nbjourstab");
+ 
   let classe = "";
-  if (patients) {
+  if (patients[0] !== null) {
     patients.forEach((elem) => {
-      let chambre = elem.chambre;
       let dateEntree = elem.dateEntre;
       let strNowDate = dateDuJour();
       let days = datediff(parseDate(dateEntree), parseDate(strNowDate));

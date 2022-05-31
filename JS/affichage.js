@@ -12,6 +12,7 @@ function affichage() {
   let entree = document.getElementById("entree");
   let remarques = document.getElementById("remarques").value;
   let civilite = document.getElementById("civilite").value;
+  let pathologie = document.getElementById("anamnese").value;
   /**
    * on met tous les tous de validité
    */
@@ -70,9 +71,9 @@ function affichage() {
   } else {
     bil += rtl + "Entré le " + frenchdate(entree.value);
   }
-  if (document.getElementById("anamnese").value !== "") {
+  if (anamnese !== "") {
     bil += rtl + rtl + `======= Anamnèse  =======`;
-    bil += rtl + rtl + document.getElementById("anamnese").value;
+    bil += rtl + rtl + anamnese;
   }
 
   if (document.getElementById("histoire").value !== "") {
@@ -291,5 +292,5 @@ function affichage() {
     e.stopPropagation();
   });
 
-  storeAndCheck(chambre, civilite, nom, prenom, entree);
+  storeAndCheck(chambre, civilite, nom, prenom, entree, pathologie);
 }
