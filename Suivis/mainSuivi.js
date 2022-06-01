@@ -1,7 +1,17 @@
 function lectureListe() {
-  let  donnee = (localStorage.getItem("liste"));
+  let donnee = localStorage.getItem("liste");
   return JSON.parse(donnee);
-}
+};
+
+let trieParChambre = () => {
+  let patients = lectureListe();
+  if (patients.length) {
+    patients.sort((a, b) => {
+      return a.chambre - b.chambre;
+    });
+    return patients;
+  }
+};
 
 function sauveListe(tableau) {
   localStorage.setItem("liste", JSON.stringify(tableau));
@@ -17,8 +27,8 @@ function effaceListeSuivis() {
 function afficheListeSuivis() {
   const divListeContainer = document.querySelector("#container-patients");
   localStorage.length;
-  const list = lectureListe();
-  
+  const list = trieParChambre();
+
   list.map((elem) => {
     divListeContainer.insertAdjacentHTML(
       "beforeend",
@@ -29,12 +39,14 @@ function afficheListeSuivis() {
   });
 }
 
-afficheListeSuivis()
+afficheListeSuivis();
 
 // on ajoute e listener
-document.querySelectorAll("textarea").forEach((elem) => elem.addEventListener("input", (e) => {
-  let a = elem.getAttribute("id");
-  let text = elem.value;
-  console.log("id", a)
-  console.log("texte", text)
-}))
+document.querySelectorAll("textarea").forEach((elem) =>
+  elem.addEventListener("input", (e) => {
+    let a = elem.getAttribute("id");
+    let text = elem.value;
+    console.log("id", a);
+    console.log("texte", text);
+  })
+);
