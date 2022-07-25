@@ -12,7 +12,7 @@ function shorcuts() {
     } else if (e.key.toLowerCase() === "p" && e.ctrlKey) {
       e.preventDefault();
       window.location.href =
-        "https://olivier6464.github.io/appTaf//pages/suivis/suivis.html";
+        "https://olivier6464.github.io/appTaf/pages/suivis/index.html";
       // affichage();
     }
     // else if (e.key === "F3") {
