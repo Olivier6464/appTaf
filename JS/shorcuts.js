@@ -11,7 +11,7 @@ function shorcuts() {
       toggleModalHelp();
     } else if (e.key.toLowerCase() === "p" && e.ctrlKey) {
       e.preventDefault();
-      window.location.href = "Suivis/suivis.html";
+      window.location.href = "/pages/suivis/suivis.html";
       // affichage();
     }
     // else if (e.key === "F3") {

@@ -3,16 +3,6 @@ function lectureListe() {
   return JSON.parse(donnee);
 };
 
-let trieParChambre = () => {
-  let patients = lectureListe();
-  if (patients.length) {
-    patients.sort((a, b) => {
-      return a.chambre - b.chambre;
-    });
-    return patients;
-  }
-};
-
 function sauveListe(tableau) {
   localStorage.setItem("liste", JSON.stringify(tableau));
 }
@@ -33,7 +23,7 @@ function afficheListeSuivis() {
     divListeContainer.insertAdjacentHTML(
       "beforeend",
       `<div class="container-patient" >
-      <label><span>${elem.name} ${elem.prenom}</span></label> <textarea  id=${elem.id} class="letext"></textarea>
+      <label class="suivi"><span>${elem.name} ${elem.prenom}</span></label> <textarea  id=${elem.id} class="letext suivi"></textarea>
       </div>`
     );
   });
@@ -50,3 +40,5 @@ document.querySelectorAll("textarea").forEach((elem) =>
     console.log("texte", text);
   })
 );
+
+// https://www.youtube.com/channel/UCzgDXE14nQ-gJgchzTmK1dQ/videos

@@ -25,6 +25,7 @@
   </head>
 
   <body>
+    <div id="app">
     <div class="modalhelp-container">
       <div class="overlay modalhelp-trigger"></div>
       <div class="modalhelp">
@@ -75,11 +76,11 @@
         <li id="copier" onclick="affichage()">Copier</li>
         <!-- on affiche les numeros internes -->
         <li>
-          <a href="Actes/index.html" target="_blank">Actes</a>
+          <a href="/actes" onclick="route();">Actes</a>
           
         </li>
         <li>
-          <a href="./Suivis/suivis.html" target="_blank">Suivis</a>
+          <a href="/suivis" onclick="route();">Suivis</a>
           
         </li>
         <li>
@@ -389,21 +390,26 @@
               <option value="botte platrée">botte platrée</option>
               <option value="botte en résine">botte en résine</option>
               <option value="botte de marche">botte de marche</option>
-              <option
-                value="botte de marche avec coussins d'air
-  gonflables"
-              >
+              <option value="botte de marche avec coussins d'air gonflables">
                 botte de marche avec coussins d'air gonflables
               </option>
               <option value="chaussure de décharge du talon">
                 chaussure de décharge du talon
               </option>
-              <option
-                value="chaussure de décharge de l'avant
-pied"
-              >
+              <option  value="chaussure de décharge de l'avant pied">
                 chaussure de décharge de l'avant pied
               </option>
+            </optgroup>
+            <optgroup label="Corsets">
+              <option value="corset lombaire">corset lombaire</option>
+              <option value="corset lombaire diurne">corset lombaire diurne</option>
+              <option value="corset lombaire nocturne">corset lombaire nocturne</option>
+              <option value="corset thoracolombaire">corset thoracolombaire</option>
+              <option value="corset thoracolombaire diurne">corset thoracolombaire diurne</option>
+              <option value="corset thoracolombaire nocturne">corset thoracolombaire nocturne</option>
+              <option value="minerve">minerve</option>
+              <option value="minerve diurne">minerve diurne</option>
+              <option value="minerve nocturne">minerve nocturne</option>
             </optgroup>
             <optgroup label="Ceintures">
               <option value="ceinture de soutient abdominal">
@@ -411,15 +417,10 @@ pied"
               </option>
               <option value="ceinture thoracique">ceinture thoracique</option>
               <option value="ceinture lombaire">ceinture lombaire</option>
-              <option
-                value="ceinture lombaire à double renforts
-  de
-  contention"
-              >
+              <option value="ceinture lombaire à double renforts de contention">
                 ceinture lombaire à double renforts de contention
               </option>
             </optgroup>
-
             <optgroup label="Colliers cervicals">
               <option value="collier cervical">collier cervical</option>
               <option value="collier cervical en mousse">
@@ -431,10 +432,7 @@ pied"
             </optgroup>
             <optgroup label="Orthèses">
               <option value="orthèse de cheville">orthèse de cheville</option>
-              <option
-                value="orthèse de cheville fonctionelle avec
-  coussins d'air"
-              >
+              <option value="orthèse de cheville fonctionelle avec coussins d'air">
                 orthèse de cheville fonctionelle avec coussins d'air
               </option>
               <option
@@ -603,9 +601,7 @@ scratchs"
 
           <label class="fonctionnel"
             >
-            <span class="material-symbols-outlined">
-              elderly
-              </span>
+          
             <span>Marche (périmètre, aides techniques ...)</span></label
           >
 
@@ -888,9 +884,12 @@ scratchs"
             <option value="bonne compréhension des consignes">
               bonne compréhension des consignes
             </option>
-            <option value="désorientaton spatio-temporelle">
+            <option value="réponses et commentaires appropriés">réponses et commentaires appropriés</option>
+            <option value="pas de désorientaton spatio-temporelle">
               pas de désorientaton spatio-temporelle
             </option>
+            <option value="mauvaise compréhension des consignes">mauvaise compréhension des consignes</option>
+            <option value="réponses et commentaires inappropriés">réponses et commentaires inappropriés</option>
             <option value="désorientaton spatio-temporelle">
               désorientaton spatio-temporelle
             </option>
@@ -1156,6 +1155,7 @@ muco-purulents. "
         </div>
       </div>
     </form>
+  </div>
     <script src="JS/uuidv4.js"></script>
     <script src="JS/getSelectionsListe.js"></script>
     <script src="JS/spacer.js"></script>
@@ -1193,5 +1193,7 @@ muco-purulents. "
     <script src="JS/rmNastyChar.js"></script>
     <script src="JS/shorcuts.js"></script>
     <script src="JS/modalHelpContainer.js"></script>
+    <script src="JS/suivi.js"></script>
+    <script src="JS/router.js"></script>
   </body>
 </html>
