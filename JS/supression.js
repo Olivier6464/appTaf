@@ -5,7 +5,6 @@ function supression() {
     sub.addEventListener("click", function (e) {
       let result = patients.filter((el) => el.id != e.target.id);
       sauveListe(result);
-      patients = lectureListe();
       afficheListe(trieParChambre);
     });
   }

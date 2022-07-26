@@ -20,7 +20,7 @@ function afficheListe() {
   tableau.insertAdjacentHTML(
     "beforeend",
     `<tr>
-        <td onclick="afficheListe(trieParChambre)"class="itemTab"><div align="center">Chambre</div></td>
+        <td onclick="afficheListe(trieParChambre)" class="itemTab"><div align="center">Chambre</div></td>
         <td onclick="afficheListe(trieParNom)" class="itemTab"><div align="center">Nom</div></td>
         <td onclick="afficheListe(trieParPrenom)" class="itemTab"><div align="center">Prénom</div></td>
         <td onclick="afficheListe(trieParNbJours)" class="itemTab"><div align="center">nbJours</div></td>
@@ -53,7 +53,7 @@ function afficheListe() {
    <td><div align="center">${days}<div></td>
    <td><div align="center">${elem.dateEntre}<div></td>
    <td><div align="center">${elem.id}<div></td>
-   <td> <div class="supprimer" id=${elem.id} align="center"><i class="fa fa-trash" aria-hidden="true"></i>
+   <td><div class="supprimer" id=${elem.id} align="center"><i class="fa fa-trash" aria-hidden="true"></i>
    </div> </td>
    <td class="itemTab"><i class="fa fa-save"></i></td>
    </tr>
