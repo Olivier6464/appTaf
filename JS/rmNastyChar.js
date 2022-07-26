@@ -12,5 +12,6 @@ function rmNastyChars(ch) {
   ch = ch.replaceAll(/(\/+)/gm, "//");
   // lignes vides en double
   ch = ch.replaceAll(/\n\n+/g, "\n\n");
+  ch = ch.replace('//', '/').replace('//', '/');
   return ch;
 }
