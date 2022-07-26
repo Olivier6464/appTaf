@@ -53,7 +53,7 @@ function afficheListe() {
    <td><div align="center">${days}<div></td>
    <td><div align="center">${elem.dateEntre}<div></td>
    <td><div align="center">${elem.id}<div></td>
-   <td><div align="center"><i class="fa fa-trash supprimer" id=${elem.id} aria-hidden="true"></i>
+   <td><div align="center" ><i class="fa fa-trash supprimer" id=${elem.id} aria-hidden="true"></i>
    </div></td>
    <td class="itemTab"><i class="fa fa-save"></i></td>
    </tr>

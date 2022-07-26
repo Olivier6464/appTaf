@@ -39,7 +39,7 @@ function storeAndCheck(chambre, civilite, nom, prenom, entree, pathologie) {
   }
   let patients = JSON.parse(localStorage.getItem("liste"));
   let index = patients.findIndex(
-    (patient) => patient.name == nom && patient.prenom == prenom
+    (patient) => patient?.name == nom && patient.prenom == prenom
   );
   // index trouvé donc patient déja dans list on change la date d'arrivée
   if (index != -1) {
