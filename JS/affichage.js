@@ -71,9 +71,9 @@ function affichage() {
   } else {
     bil += rtl + "Entré le " + frenchdate(entree.value);
   }
-  if (anamnese !== "") {
+  if (pathologie !== "") {
     bil += rtl + rtl + `======= Anamnèse  =======`;
-    bil += rtl + rtl + anamnese;
+    bil += rtl + rtl + pathologie;
   }
 
   if (document.getElementById("histoire").value !== "") {

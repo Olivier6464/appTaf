@@ -1,7 +1,7 @@
 function lectureListe() {
   let donnee = localStorage.getItem("liste");
   return JSON.parse(donnee);
-};
+}
 
 function sauveListe(tableau) {
   localStorage.setItem("liste", JSON.stringify(tableau));
@@ -29,7 +29,7 @@ function afficheListeSuivis() {
   });
 }
 
-afficheListeSuivis();
+// afficheListeSuivis();
 
 // on ajoute e listener
 document.querySelectorAll("textarea").forEach((elem) =>
@@ -40,5 +40,3 @@ document.querySelectorAll("textarea").forEach((elem) =>
     console.log("texte", text);
   })
 );
-
-// https://www.youtube.com/channel/UCzgDXE14nQ-gJgchzTmK1dQ/videos
