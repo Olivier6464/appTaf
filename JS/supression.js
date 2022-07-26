@@ -1,11 +1,11 @@
 function supression() {
-  const sup = document.querySelectorAll("div.supprimer");
+  const sup = document.querySelectorAll("i.supprimer");
   let patients = lectureListe();
   for (let sub of sup) {
     sub.addEventListener("click", function (e) {
       let result = patients.filter((el) => el.id != e.target.id);
       sauveListe(result);
-      console.log("click: ", e.target.id);
+      // console.log("click: ", e.target.id);
       patients = lectureListe();
       afficheListe(trieParChambre);
     });

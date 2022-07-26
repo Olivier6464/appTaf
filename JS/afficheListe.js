@@ -29,7 +29,7 @@ function afficheListe() {
         
       </tr>`
   );
- 
+
   let classe = "";
   if (patients[0] !== null) {
     patients.forEach((elem) => {
@@ -53,8 +53,8 @@ function afficheListe() {
    <td><div align="center">${days}<div></td>
    <td><div align="center">${elem.dateEntre}<div></td>
    <td><div align="center">${elem.id}<div></td>
-   <td> <div class="supprimer" id=${elem.id} align="center"><i class="fa fa-trash" aria-hidden="true"></i>
-   </div> </td>
+   <td><div align="center"><i class="fa fa-trash supprimer" id=${elem.id} aria-hidden="true"></i>
+   </div></td>
    <td class="itemTab"><i class="fa fa-save"></i></td>
    </tr>
    `
