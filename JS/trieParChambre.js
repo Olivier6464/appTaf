@@ -1,6 +1,6 @@
 let trieParChambre = () => {
   let patients = lectureListe();
-  if (patients.length >= 2) {
+  if (patients) {
     patients.sort((a, b) => {
       return a.chambre - b.chambre;
     });

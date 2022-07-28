@@ -31,7 +31,7 @@ function afficheListe() {
   );
 
   let classe = "";
-  if (patients[0] !== null) {
+  if (patients) {
     patients.forEach((elem) => {
       let dateEntree = elem.dateEntre;
       let strNowDate = dateDuJour();
