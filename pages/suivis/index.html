@@ -4,19 +4,46 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script src="./suivi.js" defer></script>
+    <!-- <script src="./suivi.js" defer></script> -->
     <!-- <link rel="stylesheet" type="text/css" href="suivis.css" /> -->
   </head>
   <body>
     <title>Suivis</title>
-    <button><a href="/actes" onclick="route();">Actes</a></button>
+    <nav class="nav" role="navigation">
+      <ul class="menu">
+        <li>
+          <ul class="menu0">
+            <li id="temps"></li>
+            <li id="laDate"></li>
+          </ul>
+        </li>
+
+        <li id="copier" onclick="affichage()">Copier</li>
+        <!-- on affiche les numeros internes -->
+        <li>
+          <a href="/actes" onclick="route();">Actes</a>
+        </li>
+        <li>
+          <a href="/" onclick="route();">Bilan</a>
+        </li>
+        <li>
+          <a onclick="afficheListeSuivis();">Afficher</a>
+        </li>
+        <li>
+          <a onclick="effaceListeSuivis();">Effacer</a>
+        </li>
+      </ul>
+    </nav>
+    //=================================================
+    <!-- <button><a href="/actes" onclick="route();">Actes</a></button>
     <button><a href="/" onclick="route();">Bilan</a></button>
     <button onclick="afficheListeSuivis();">Afficher</button>
-    <button onclick="effaceListeSuivis()">Effacer</button>
-
+    <button onclick="effaceListeSuivis()">Effacer</button> -->
+    //=======================================================
     <div id="container-patients">
-      <div class="container-patient" >
-        <label><span>${elem.name} ${elem.prenom}</span></label> <textarea  id=${elem.id} class="textsuivi"></textarea>
+      <div class="container-patient">
+        <label><span>${elem.name} ${elem.prenom}</span></label>
+        <textarea id="${elem.id}" class="textsuivi"></textarea>
       </div>
     </div>
   </body>
