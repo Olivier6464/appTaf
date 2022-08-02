@@ -4,11 +4,15 @@
  * on passe la fonction qui extrait la liste du localstorage
  * et renvoi le tableau
  */
+
+ let tableau = document.querySelector("table");
+ tableau.style.display = "none";
+
 function afficheListe() {
   localStorage.length;
   let patients = trieParChambre();
   console.log(patients);
-  let tableau = document.querySelector("#tableau");
+  
 
   tableau.classList.add(".tableau");
   // vide le tableau du DOM
@@ -66,5 +70,4 @@ function afficheListe() {
   scroll(50, 0);
 }
 
-tableau.style.display = "none";
-afficheListe(trieParChambre);
+//afficheListe(trieParChambre);
