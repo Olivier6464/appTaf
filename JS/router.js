@@ -16,8 +16,8 @@ const route = (event) => {
 const routes = {
   404: "https://olivier6464.github.io/appTaf/pages/404.html",
   "/": "https://olivier6464.github.io/appTaf/index.html",
-  "/actes": "https://olivier6464.github.io/appTaf/pages/actes/",
-  "/suivis": "https://olivier6464.github.io/appTaf/pages/suivis/",
+  "/actes": "https://olivier6464.github.io/appTaf/pages/actes/index.html",
+  "/suivis": "https://olivier6464.github.io/appTaf/pages/suivis/index.html",
 };
 
 const gestionLocation = async () => {

@@ -4,21 +4,28 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-    />
-    <link rel="stylesheet" type="text/css" href="../Style/actes.css" />
-    <script type="text/javascript" defer src="../JS/actes.js"></script>
-    <title>Cotation</title>
+    <!-- <script src="./suivi.js" defer></script> -->
+    <!-- <link rel="stylesheet" type="text/css" href="suivis.css" /> -->
   </head>
   <body>
-    <button><a href="/" onclick="route();">Bilan</a></button>
-    <button><a href="/suivis" onclick="route();">Suivis</a></button>
-    <a
-      href="https://www.atih.sante.fr/sites/default/files/public/content/4199/csarr_2022_guide_de_lecture_et_de_codage_vf.docx.pdf"
-      >Catalogue (pdf)</a
-    >
+    <title>Actes</title>
+    <nav class="nav" role="navigation">
+      <ul class="menu">
+        <li>
+          <ul class="menu0">
+            <li id="temps"></li>
+            <li id="laDate"></li>
+          </ul>
+        </li>
+        <li>
+          <a href="/" onclick="route();">Bilan</a>
+        </li>
+        <li>
+          <a href="/suivis" onclick="route();">Suivis</a>
+        </li>
+      </ul>
+    </nav>
+
     <h2>Pneumologie</h2>
     <ul>
       <li>
