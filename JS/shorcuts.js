@@ -9,15 +9,11 @@ function shorcuts() {
     } else if (e.key === "F1") {
       e.preventDefault();
       toggleModalHelp();
-    } else if (e.key.toLowerCase() === "p" && e.ctrlKey) {
-      e.preventDefault();
-      window.location.href = "/suivis";
-      // affichage();
     }
-    // else if (e.key === "F3") {
-    //   e.preventDefault();
-    //   localStorage.removeItem("liste");
-    // }
+    else if (e.key.toLowerCase() === "k" && e.ctrlKey) {
+      e.preventDefault();
+      localStorage.removeItem("liste");
+    }
   });
 }
 

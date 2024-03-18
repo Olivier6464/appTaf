@@ -17,7 +17,6 @@ function storeAndCheck(chambre, civilite, nom, prenom, entree, pathologie) {
   let lenom = majFirst(nom.value);
   let leprenom = majFirst(prenom.value);
   let dateEntre = entree.value;
-  let patho = pathologie;
   //on créer l'objet
   const patient = new Object();
 
@@ -27,8 +26,6 @@ function storeAndCheck(chambre, civilite, nom, prenom, entree, pathologie) {
   patient.name = lenom;
   patient.prenom = leprenom;
   patient.dateEntre = dateEntre;
-  patient.patho = patho;
-  patient.suivi = "";
 
   // cas ou rien est en place
   if (localStorage.getItem("liste") == null) {

@@ -1,10 +1,11 @@
+// modal2 la modale de la liste des patients
+
 function listeToogle(){
   afficheListe(trieParChambre);
-  // tableau.style.display = "none";
-  if (tableau.style.display === "none") {
-    tableau.style.display = "block";
+  if (modal2.style.display === "none") {
+    modal2.style.display = "inline-block";
   } 
   else {
-    tableau.style.display = "none";
+    modal2.style.display = "none";
   }
 }
