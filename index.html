@@ -5,8 +5,6 @@
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src https://*; child-src 'none';"> -->
-
     <link rel="stylesheet" href="./assets/font-awesome-4.7.0/css/font-awesome.min.css">
 
     <!-- <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
@@ -15,7 +13,6 @@
 
     <link rel="stylesheet" type="text/css" href="Style/style.css" />
     <link rel="icon" href="favicon.ico" />
-    <!-- <script type = "text/javascript" src = "JS/frenchdate.js"></script> -->
     <title>bilan MK</title>
 </head>
 
@@ -30,7 +27,7 @@
                     <li>F1 affiche/cache l'aide</li>
                     <li>CTRL S génére le bilan et met une copie dans le clipboard</li>
                     <li>CTRL B affichage liste patients</li>
-                    <li>CTRL P affiche le suivi des patients</li>
+                    <!-- <li>CTRL P affiche le suivi des patients</li> -->
                 </ul>
                 </p>
             </div>
@@ -50,7 +47,7 @@
                 <li id="copier" onclick="affichage()">Copier</li>
                 <!-- on affiche les numeros internes -->
                 <li><a href="/actes" onclick="route();">Actes</a></li>
-                <li><a href="/suivis" onclick="route();">Suivis</a></li>
+                <!-- <li><a href="/suivis" onclick="route();">Suivis</a></li> -->
                 <li>
                     <ul class="menu2">
                         <li><a href="#top"><i class="fa fa-arrow-up"></i></a></li>
@@ -63,13 +60,12 @@
         </nav>
         <br />
         <br />
-        <br />
-        <br />
         <div id="tav">
             <div id="sup45"></div>
             <div id="containerTableau">
                 <table></table>
             </div>
+            <br><br>
         </div>
         <br><br>
 
@@ -77,7 +73,6 @@
             <div>
                 <fieldset>
                     <br /><br />
-                    <div id="sup45"></div>
                     <legend align="center">
                         <span class="donnees rubrique"><span>Dossier médical</span></span>
                     </legend>
@@ -119,9 +114,6 @@
                         <div>
                             <div class="plusmoins moins1j">- 1 jour </div>
                         </div>
-
-
-
                     </div>
             </div>
             <br />
@@ -138,9 +130,6 @@
             <br />
             <input id="prenom" class="majuscule" name="prenom" type="text" required="true" size="15"
                 maxlength="30" /><br /><br />
-
-            <!-- <label class="donnees" for="entrée"><span>Date d'entrée</span></label><input type="date"
-        id="entree" name="entree" class="date" required="true" size="18" /><br /><br /> -->
 
             <br /><br />
 
@@ -786,115 +775,104 @@ muco-purulents. ">
                 <select id="phrpecPrev" onchange="replaceSelection('priseEnChargePrev',this.id)">
                     id="phrpecPrev"
                     onchange="replaceSelection('priseEnChargePrev',this.id)"
-                  >
+                    >
                     <option value="">phrases</option>
                     <option value="A court terme: ">A court terme:</option>
                     <option value="A long terme: ">A long terme:</option>
                     <option value="- travail de la station debout et des transferts">
-                      travail de la station debout et des transferts
+                        travail de la station debout et des transferts
                     </option>
                     <option value="- travail de la marche avec aide technique">
-                      travail de la marche aide technique
+                        travail de la marche aide technique
                     </option>
                     <option value="- reprise progressive de la marche">
-                      reprise progressive de la marche
+                        reprise progressive de la marche
+                    </option>
+                    <option value="- amélioration de l'endurance et de la qualité de la marche">
+                        amélioration de l'endurance et de la qualité de la marche
                     </option>
                     <option
-                      value="- amélioration de l'endurance et de la qualité de la marche"
-                    >
-                      amélioration de l'endurance et de la qualité de la marche
-                    </option>
-                    <option
-                      value="- apprentissage des techniques prévention de luxation: lit, position assise, baignoire, automobile"
-                    >
-                      apprentissage des techniques prévention de luxation: lit, position
-                      assise, baignoire, automobile
+                        value="- apprentissage des techniques prévention de luxation: lit, position assise, baignoire, automobile">
+                        apprentissage des techniques prévention de luxation: lit, position
+                        assise, baignoire, automobile
                     </option>
                     <option value="- mobilisation active et passive">
-                      mobilisation active et passive
+                        mobilisation active et passive
                     </option>
                     <option value="- mobilisation active et passive pour la récupération des amplitudes articulaires">
-                      mobilisation active et passive pour la récupération des amplitudes articulaires
+                        mobilisation active et passive pour la récupération des amplitudes articulaires
+                    </option>
+                    <option value="- travail individuel de l'équilibre et de la proprioception">
+                        travail individuel de l'équilibre et de la proprioception
+                    </option>
+                    <option value="- recherche de la projection antérieure du centre du gravité">
+                        recherche de la projection antérieure du centre du gravité
                     </option>
                     <option
-                      value="- travail individuel de l'équilibre et de la proprioception"
-                    >
-                      travail individuel de l'équilibre et de la proprioception
+                        value="- travail des stratégies d'adaptation posturale et de protection par des exercices de déséquilibration intrinsèque et extrinsèque">
+                        travail des stratégies d'adaptation posturale et de protection par
+                        des exercices de déséquilibration intrinsèque et extrinsèque
                     </option>
                     <option
-                      value="- recherche de la projection antérieure du centre du gravité"
-                    >
-                      recherche de la projection antérieure du centre du gravité
-                    </option>
-                    <option
-                      value="- travail des stratégies d'adaptation posturale et de protection par des exercices de déséquilibration intrinsèque et extrinsèque"
-                    >
-                      travail des stratégies d'adaptation posturale et de protection par
-                      des exercices de déséquilibration intrinsèque et extrinsèque
-                    </option>
-                    <option
-                      value="- travail en double tâche: contrôle postural et mouvement volontaire complexe et contrôle postural et tâche cognitive"
-                    >
-                      travail en double tâche: contrôle postural et mouvement volontaire
-                      complexe et contrôle postural et tâche cognitive
+                        value="- travail en double tâche: contrôle postural et mouvement volontaire complexe et contrôle postural et tâche cognitive">
+                        travail en double tâche: contrôle postural et mouvement volontaire
+                        complexe et contrôle postural et tâche cognitive
                     </option>
                     <option value="- travail du relevé du sol">
-                      travail du relevé du sol
+                        travail du relevé du sol
                     </option>
                     <option value="- travail des transferts">
-                      travail des transferts
+                        travail des transferts
                     </option>
                     <option
-                      value="- travail des transferts: debout/assis, assis/debout et retournement et lever du lit"
-                    >
-                      travail des transferts: debout/assis, assis/debout et retournement
-                      et lever du lit
+                        value="- travail des transferts: debout/assis, assis/debout et retournement et lever du lit">
+                        travail des transferts: debout/assis, assis/debout et retournement
+                        et lever du lit
                     </option>
                     <option value="- renforcement musculaire">
-                      renforcement musculaire
+                        renforcement musculaire
                     </option>
                     <option
-                      value="- renforcement musculaire, des quadriceps, des muscles stabilisateurs du bassin et des triceps suraux en charge"
-                    >
-                      renforcement musculaire, des quadriceps, des muscles
-                      stabilisateurs du bassin et des triceps suraux en charge
+                        value="- renforcement musculaire, des quadriceps, des muscles stabilisateurs du bassin et des triceps suraux en charge">
+                        renforcement musculaire, des quadriceps, des muscles
+                        stabilisateurs du bassin et des triceps suraux en charge
                     </option>
                     <option value="- prise en charge collective">
-                      prise en charge collective
+                        prise en charge collective
                     </option>
                     <option value="- gymnastique médicale adaptée">
-                      gymnastique médicale adaptée
+                        gymnastique médicale adaptée
                     </option>
                     <option value="- éducation thérapeutique">
-                      éducation thérapeutique
+                        éducation thérapeutique
                     </option>
                     <option value="- gymnastique adaptée">gymnastique adaptée</option>
                     <option value="- désencombrement bronchique">
-                      désencombrement bronchique
+                        désencombrement bronchique
                     </option>
                     <option value="- rééducation respiratoire">
-                      rééducation respiratoire
+                        rééducation respiratoire
                     </option>
                     <option value="- ré-entrainement à l'effort (ergocycle)">
-                      ré-entrainement à l'effort (ergocycle)
+                        ré-entrainement à l'effort (ergocycle)
                     </option>
                     <option value="- séances collectives de rééducation à la marche">
-                      séances collectives de rééducation à la marche
+                        séances collectives de rééducation à la marche
                     </option>
                     <option value="- séances collectives de gymnastique douce">
-                      séances collectives de gymnastique douce
+                        séances collectives de gymnastique douce
                     </option>
                     <option value="- séances collectives de gymnastique soutenue">
-                      séances collectives de gymnastique soutenues
+                        séances collectives de gymnastique soutenues
                     </option>
                     <option value="- séances collectives de rééducation respiratoire">
-                      séances collectives de rééducation respiratoire
+                        séances collectives de rééducation respiratoire
                     </option>
                     <option value="- séances collectives de rééducation de l'équilibre">
-                      séances collectives de rééducation de l'équilibre
+                        séances collectives de rééducation de l'équilibre
                     </option>
                     <option value="- séances collectives de relaxation">
-                      séances collectives de relaxation
+                        séances collectives de relaxation
                     </option>
                 </select>
             </fieldset>

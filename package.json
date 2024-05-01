@@ -1,0 +1,22 @@
+{
+  "name": "apptaf",
+  "version": "1.0.0",
+  "description": "https://www.youtube.com/watch?v=ZxKM3DCV2kE",
+  "main": "index.html",
+  "scripts": {
+    "start": "live-server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Olivier6464/appTaf.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Olivier6464/appTaf/issues"
+  },
+  "homepage": "https://github.com/Olivier6464/appTaf#readme",
+  "devDependencies": {
+    "live-server": "^1.2.2"
+  }
+}
